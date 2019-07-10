@@ -154,6 +154,36 @@ namespace PlayWithGraphs
 
         
         }
+        
+        //add new int by index
+        public int[] addToArray(int [] arr, int num, int index)
+        {
+            int [] res = new int[arr.Length+1];
+
+            for (int i = 0; i < res.Length; i++)
+            {
+                if (i == index)
+                {
+                    res[i] = num;
+                }
+                else
+                {
+
+                    if (i > index)
+                    {
+                        res[i] = arr[i - 1];
+                    }
+
+                    else
+                    {
+                        res[i] = arr[i];
+                    }
+                }
+            }
+            
+            return res;
+
+        }
     }
     
 }
